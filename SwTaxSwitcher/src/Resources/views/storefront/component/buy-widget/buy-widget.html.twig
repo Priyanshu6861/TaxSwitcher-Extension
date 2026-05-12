@@ -1,0 +1,8 @@
+{% sw_extends '@Storefront/storefront/component/buy-widget/buy-widget.html.twig' %}
+
+{% block buy_widget_tax_link %}
+    {{ parent() }}
+    {% if config('SwTaxSwitcher.config.taxSwitcherProductDetail') %}
+        {% sw_include '@SwTaxSwitcher/storefront/page/tax-switcher.html.twig' %}
+    {% endif %}
+{% endblock %}

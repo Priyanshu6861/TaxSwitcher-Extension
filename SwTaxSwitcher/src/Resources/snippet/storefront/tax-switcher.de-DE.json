@@ -1,0 +1,11 @@
+{
+  "tax-switcher": {
+    "modal-title": "Preisauszeichnung",
+    "modal-gross": "Brutto (zzgl. MwSt.)",
+    "modal-body-helptext": "Bitte wählen Sie Ihre bevorzugte Einstellung:",
+    "gross": "Brutto",
+    "net": "Netto",
+    "incl-vat": "inkl. MwSt.",
+    "modal-net": "Netto (inkl. MwSt.)"
+  }
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>General configuration</title>
+        <title lang="de-DE">Allgemeine Konfiguration</title>
+        <input-field type="bool">
+            <name>taxSwitcherEnable</name>
+            <label>Enable</label>
+            <label lang="de-DE">Aktivieren</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+
+        <input-field type="single-select">
+            <name>taxSwitchType</name>
+            <defaultValue>toggle</defaultValue>
+            <label>Switch Type</label>
+            <label lang="de-DE">Schaltertyp</label>
+            <options>
+                <option>
+                    <id>dropdown</id>
+                    <name>Dropdown</name>
+                    <name lang="de-DE">Runterfallen</name>
+                </option>
+                <option>
+                    <id>toggle</id>
+                    <name>Toggle Switch</name>
+                    <name lang="de-DE">Kippschalter</name>
+                </option>
+            </options>
+        </input-field>
+
+        <input-field type="bool">
+            <name>taxSwitcherLoadingAnimation</name>
+            <label>Show Loading Animation</label>
+            <label lang="de-DE">Ladeanimation anzeigen</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+    </card>
+    <card>
+        <title>Pop Up</title>
+        <title lang="de-DE">Auftauchen</title>
+        <input-field type="bool">
+            <name>showFirstVisitPopUp</name>
+            <label>Show popup on first visit ?</label>
+            <label lang="de-DE">Popup beim ersten Besuch zeigen?</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+    </card>
+    <card>
+        <title>Position In Page</title>
+        <title lang="de-DE">Position in Seite</title>
+        <input-field type="bool">
+            <name>taxSwitcherTopBar</name>
+            <label>Show in the Top Bar</label>
+            <label lang="de-DE">Zeigen Sie in der Spitzenleiste</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>taxSwitcherHeader</name>
+            <label>Show in the header</label>
+            <label lang="de-DE">Im Kopf zeigen</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <!-- <input-field type="bool">
+            <name>taxSwitcherOffCanvasMenu</name>
+            <label>Show in off-canvas menu (Mobile)</label>
+            <label lang="de-DE">Im Offcanvas-Menü anzeigen (Mobile)</label>
+            <defaultValue>true</defaultValue>
+        </input-field> -->
+        <input-field type="bool">
+            <name>taxSwitcherProductDetail</name>
+            <label>Show on the product page? (Below the price)</label>
+            <label lang="de-DE">Auf der Produktseite anzeigen? (Unter dem Preis)</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>taxSwitcherFooter</name>
+            <label>Show in the footer</label>
+            <label lang="de-DE">In der Fußzeile zeigen</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+    </card>
+
+    <card>
+        <title>Log-in/Account</title>
+        <title lang="de-DE">Auftauchen</title>
+        <input-field type="bool">
+            <name>preselectionIamField</name>
+            <label>Preselection of the "I am" field</label>
+            <label lang="de-DE">Vorauswahl des Felds "Ich bin"</label>
+            <defaultValue>true</defaultValue>
+            <helpText>
+                If enabled, the "I am" field will be preselected by default for users during
+                registration or checkout if the default option is selected.
+            </helpText>
+            <helpText lang="de-DE">Wenn dies aktiviert ist, wird das Feld "Ich bin" standardmäßig
+                für Benutzer während der Registrierung oder Kasse vorgewählt, wenn die
+                Standardoption ausgewählt ist.
+            </helpText>
+        </input-field>
+
+        <input-field type="bool">
+            <name>taxSwitcherLoggedCustomers</name>
+            <label>Hide gross/net Switcher for logged in customers.</label>
+            <label lang="de-DE">Hide gross/net Switcher for logged in customers.</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+    </card>
+
+
+</config>

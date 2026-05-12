@@ -1,0 +1,27 @@
+{
+    "name": "taxswitcher/sw-tax-switcher",
+    "description": "Professional Shopware 6 plugin for dynamic gross/net price display switching",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "~6.7.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "TaxSwitcher\\SwTaxSwitcher",
+        "label": {
+            "de-DE": "Tax Switcher",
+            "en-GB": "Tax Switcher"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "TaxSwitcher\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TaxSwitcher\\Tests\\": "tests/"
+        }
+    }
+}

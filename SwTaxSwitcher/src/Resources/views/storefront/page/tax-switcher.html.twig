@@ -1,0 +1,47 @@
+{% if config('SwTaxSwitcher.config.taxSwitcherEnable') and (not config('SwTaxSwitcher.config.taxSwitcherLoggedCustomers') or not context.customer) %}
+    {% set position = position ?? 'Main' %}
+    <template data-tax-switcher></template>
+    <div id="tax-switcher-data" class="d-none" data-switch-url="{{ path('taxswitcher.tax.switch') }}" data-modal-url="{{ path('taxswitcher.tax.switch.modal') }}" data-show-first-popup="{{ config('SwTaxSwitcher.config.showFirstVisitPopUp') }}" data-show-loading-animation="{{ config('SwTaxSwitcher.config.taxSwitcherLoadingAnimation') }}"></div>
+    {% if  config('SwTaxSwitcher.config.taxSwitchType') == 'dropdown' %}
+        <form method="post" action="{{ path('taxswitcher.tax.switch') }}" class="tax-switch-form ">
+            {% set isNet = app.request.cookies.get('taxMode') == 'net' %}
+            <div class=" dropdown">
+                <button class="btn dropdown-toggle top-bar-nav-btn" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="top-bar-nav-text d-none d-md-inline">
+                        {{ 'tax-switcher.incl-vat'|trans|sw_sanitize }}
+                    </span>
+                </button>
+
+                <ul class="top-bar-list dropdown-menu dropdown-menu-end">
+                    <li class="top-bar-list-item {% if isNet == 1 %} active {% endif %}">
+
+                        <button class="dropdown-item d-flex align-items-center gap-2{% if isNet == 1 %} active {% endif %}" type="submit">
+                            {{ 'tax-switcher.gross'|trans|sw_sanitize }}
+                        </button>
+
+                        <input type="hidden" name="net" value="{{ 1 }}"></li>
+                        <li class="top-bar-list-item {% if isNet == 0 %} active {% endif %}">
+                            <button class="dropdown-item d-flex align-items-center gap-2{% if isNet == 0 %} active {% endif %}" type="submit" name="net" value="{{ 0 }}">
+                                {{ 'tax-switcher.net'|trans|sw_sanitize }}
+                            </button>
+                        </li>
+                    </ul>
+
+                    <input type="hidden" name="return" value="{{ app.request.uri }}"></form>
+                {% else %}
+                    <div class="tax-switch tax-switch-checkbox" id="taxSwitchProductDetail-{{ position }}">
+                        <div class="form-check form-switch" aria-hidden="true">
+                            {% set isNet = app.request.cookies.get('taxMode') == 'net' %}
+                            <input type="checkbox" class="form-check-input" id="taxSwitchProductDetailInput-{{ position }}" role="switch" {% if not isNet %} checked{% endif %}>
+                                <label class="form-check-label" for="taxSwitchProductDetailInput-{{ position }}">
+                                    {{ 'tax-switcher.incl-vat'|trans|sw_sanitize }}
+                                </label>
+                            </div>
+
+                            <form class="tax-switch-form" action="{{ path('taxswitcher.tax.switch') }}" method="post" id="taxSwitcherForm-{{ position }}" data-form-submit-loader="true">
+                                <input type="hidden" name="net" id="taxModeInput-{{ position }}" value="{{ isNet ? '1' : '0' }}">
+                                    <input type="hidden" name="return" value="{{ app.request.uri }}"></form>
+
+                                {% endif %}
+                            {% endif %}
+                            

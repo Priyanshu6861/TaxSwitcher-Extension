@@ -1,0 +1,11 @@
+{
+  "tax-switcher": {
+    "modal-title":"Price labeling",
+    "modal-gross":"Gross (excl. VAT)",
+    "modal-body-helptext":"Please choose your preferred setting:",
+    "gross":"Gross",
+    "net":"Net",
+    "incl-vat":"incl. VAT.",
+    "modal-net":"Net (incl. VAT)"
+  }
+}

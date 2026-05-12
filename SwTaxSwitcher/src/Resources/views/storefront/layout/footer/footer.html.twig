@@ -1,0 +1,16 @@
+{% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
+
+{% block layout_footer_service_menu %}
+    <div class="tax-switcher">
+        <ul class="list-unstyled d-flex justify-content-center">
+            <li class="footer-service-menu-item-tax">
+                {% if config('SwTaxSwitcher.config.taxSwitcherFooter') %}
+                    {% sw_include '@SwTaxSwitcher/storefront/page/tax-switcher.html.twig'  with {
+                    position:'footer'
+                } %}
+                {% endif %}
+            </li>
+        </ul>
+    </div>
+    {{ parent() }}
+{% endblock %}

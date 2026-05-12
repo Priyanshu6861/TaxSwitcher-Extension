@@ -1,0 +1,14 @@
+{% sw_extends '@Storefront/storefront/layout/header/top-bar.html.twig' %}
+
+{% block layout_header_top_bar_language %}
+    {% if config('SwTaxSwitcher.config.taxSwitcherTopBar') %}
+        <nav class="nav navigation-tax-switcher">
+            {% sw_include '@SwTaxSwitcher/storefront/page/tax-switcher.html.twig' 
+            with {
+                    position:'topbar'
+                } %}
+        </nav>
+    {% endif %}
+
+    {{ parent() }}
+{% endblock %}

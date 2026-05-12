@@ -1,0 +1,14 @@
+{% sw_extends '@Storefront/storefront/layout/navigation/offcanvas/navigation.html.twig' %}
+
+{% block layout_navigation_offcanvas_navigation_action_currency %}
+    {{ parent() }}
+
+    {# {% if config('SwTaxSwitcher.config.taxSwitcherOffCanvasMenu') %}
+        <div class="top-bar-nav-item top-bar-language col-auto">
+            {% sw_include '@SwTaxSwitcher/storefront/page/tax-switcher.html.twig'  with {
+                    position:'mobileCanvas'
+                } %}
+        </div>
+    {% endif %} #}
+
+{% endblock %}

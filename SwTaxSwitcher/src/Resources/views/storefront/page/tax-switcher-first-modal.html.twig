@@ -1,0 +1,26 @@
+{% block tax_switcher_section %}
+    <div class="modal fade" id="taxSwitcherFirstModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        {{ 'tax-switcher.modal-title'|trans|sw_sanitize }}
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        {{ 'tax-switcher.modal-body-helptext'|trans|sw_sanitize }}
+                    </p>
+                    <div class="d-flex justify-content-around mt-3">
+                        <button type="button" class="btn btn-primary" data-tax-choice="0">
+                        {{ 'tax-switcher.modal-gross'|trans|sw_sanitize }}
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-tax-choice="1">
+                    {{ 'tax-switcher.modal-net'|trans|sw_sanitize }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

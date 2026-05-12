@@ -1,0 +1,8 @@
+{% sw_extends '@Storefront/storefront/component/address/address-personal.html.twig' %}
+
+{% block component_address_personal_account_type %}
+    {% if config('SwTaxSwitcher.config.preselectionIamField') %}
+        {% set accountType = 'private' %}
+    {% endif %}
+    {{ parent() }}
+{% endblock %}

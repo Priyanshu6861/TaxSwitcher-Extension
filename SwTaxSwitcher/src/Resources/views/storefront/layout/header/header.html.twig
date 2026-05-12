@@ -1,0 +1,12 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+
+{% block layout_header_search_toggle %}
+    {{ parent() }}
+
+    {% if config('SwTaxSwitcher.config.taxSwitcherHeader') %}
+        <div class="col-auto d-flex align-items-center">
+            {% sw_include '@SwTaxSwitcher/storefront/page/tax-switcher.html.twig'  with {position:'header'} %}
+        </div>
+    {% endif %}
+
+{% endblock %}
