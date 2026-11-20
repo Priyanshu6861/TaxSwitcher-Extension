@@ -1,5 +1,13 @@
 # Tax Switcher for Shopware 6
 
+<p align="left">
+  <img src="https://img.shields.io/badge/Shopware-6.6%20%7C%206.7-189EFF?style=for-the-badge&logo=shopware&logoColor=white" alt="Shopware" />
+  <img src="https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/Symfony-6.4%20%7C%207.x-000000?style=for-the-badge&logo=symfony&logoColor=white" alt="Symfony" />
+  <img src="https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge" alt="Status" />
+  <img src="https://img.shields.io/badge/B2B%20%2F%20B2C-Dynamic_Tax-blue?style=for-the-badge" alt="Tax Switcher" />
+</p>
+
 A professional Shopware 6 plugin that enables dynamic gross/net price display switching for your storefront, providing customers with flexible tax display options.
 
 ## Features
